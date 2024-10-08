@@ -5,6 +5,7 @@
 plugins {
     id("dokkabuild.base")
     idea
+    id("org.jetbrains.kotlinx.kover") version "0.9.0-RC"
 }
 
 val publishedIncludedBuilds = listOf("runner-cli", "dokka-gradle-plugin", "runner-maven-plugin")
@@ -121,5 +122,11 @@ idea {
                 "dokka-runners/dokka-gradle-plugin/src/testFunctional/resources/KotlinDslAccessorsTest/",
             )
         )
+    }
+}
+
+kover {
+    merge {
+        subprojects { true }
     }
 }
