@@ -29,3 +29,9 @@ dependencies {
     testImplementation(projects.dokkaSubprojects.pluginBaseTestUtils)
     testImplementation(projects.dokkaSubprojects.dokkaTestApi)
 }
+
+tasks.named<Test>("test") {
+    reports {
+        junitXml.outputLocation = file("$buildDir/test-results/testDescriptors")
+    }
+}

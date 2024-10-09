@@ -38,3 +38,9 @@ tasks.processResources {
         }
     }
 }
+
+tasks.named<Test>("test") {
+    reports {
+        junitXml.outputLocation = file("$buildDir/test-results/testDescriptors")
+    }
+}

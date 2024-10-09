@@ -130,3 +130,7 @@ kover {
         subprojects { true }
     }
 }
+
+subprojects {
+    tasks.findByName("koverXMLReport")?.dependsOn("test")
+}

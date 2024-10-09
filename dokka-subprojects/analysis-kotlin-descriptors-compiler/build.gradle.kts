@@ -23,3 +23,9 @@ dependencies {
     // TODO [beresnev] get rid of it
     compileOnly(libs.kotlinx.coroutines.core)
 }
+
+tasks.named<Test>("test") {
+    reports {
+        junitXml.outputLocation = file("$buildDir/test-results/testDescriptors")
+    }
+}
