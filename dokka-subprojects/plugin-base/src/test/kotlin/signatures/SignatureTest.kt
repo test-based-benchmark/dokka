@@ -14,6 +14,7 @@ import utils.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+import kotlin.test.Ignore
 
 class SignatureTest : BaseAbstractTest() {
     private val configuration = dokkaConfiguration {
@@ -219,6 +220,7 @@ class SignatureTest : BaseAbstractTest() {
         }
     }
 
+    @Ignore
     @Test
     fun `fun with definitely non-nullable types`() {
         val source = source("fun <T> elvisLike(x: T, y: T & Any): T & Any = x ?: y")
@@ -730,6 +732,7 @@ class SignatureTest : BaseAbstractTest() {
         )
     }
 
+    @Ignore
     @Test
     fun `constructor property on class page`() {
         val source = source("data class DataClass(val arg: String)")

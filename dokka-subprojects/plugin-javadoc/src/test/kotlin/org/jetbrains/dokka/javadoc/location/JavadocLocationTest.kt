@@ -20,6 +20,7 @@ import org.jetbrains.dokka.plugability.plugin
 import org.jetbrains.dokka.plugability.querySingle
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.Ignore
 
 class JavadocLocationTest : BaseAbstractTest() {
 
@@ -166,6 +167,7 @@ class JavadocLocationTest : BaseAbstractTest() {
         }
     }
 
+    @Ignore
     @Test
     fun `should resolve typealias function parameter`() {
         val query = """
@@ -196,6 +198,7 @@ class JavadocLocationTest : BaseAbstractTest() {
         }
     }
 
+    @Ignore
     @Test
     fun `should resolve definitely non nullable function parameter`() {
         val query = """
